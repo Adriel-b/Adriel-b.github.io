@@ -1,11 +1,12 @@
 :root {
-  --bg: #0f172a;
-  --panel: #111827;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #22d3ee;
-  --accent-dark: #0891b2;
-  --danger: #f87171;
+  --bg: #f7f1e3;
+  --panel: #fffaf0;
+  --text: #111111;
+  --muted: #4b4b4b;
+  --accent: #111111;
+  --accent-soft: #2a2a2a;
+  --danger: #a12a2a;
+  --border: #d7ccb6;
 }
 
 * {
@@ -14,8 +15,8 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(160deg, #020617 0%, #111827 100%);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
   color: var(--text);
   min-height: 100vh;
 }
@@ -26,9 +27,8 @@ body {
 }
 
 .site-header {
-  border-bottom: 1px solid #1f2937;
-  background: rgba(2, 6, 23, 0.6);
-  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--border);
+  background: #f4ecda;
 }
 
 .site-header .container {
@@ -42,7 +42,8 @@ body {
 }
 
 .brand {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
   margin: 0;
 }
 
@@ -74,7 +75,7 @@ body {
 }
 
 .tab-button:hover {
-  color: var(--accent);
+  color: var(--accent-soft);
 }
 
 .tab-button.active {
@@ -89,10 +90,11 @@ main.container {
 
 .tab-panel {
   display: none;
-  border: 1px solid #1f2937;
-  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border);
+  background: var(--panel);
   border-radius: 14px;
   padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(17, 17, 17, 0.06);
 }
 
 .tab-panel.active {
@@ -109,18 +111,18 @@ p {
 
 .cta-button {
   margin-top: 0.8rem;
-  border: none;
+  border: 1px solid #111111;
   border-radius: 8px;
   background: var(--accent);
-  color: #082f49;
+  color: #f7f1e3;
   font-weight: 700;
   padding: 0.7rem 1rem;
   cursor: pointer;
 }
 
 .cta-button:hover {
-  background: var(--accent-dark);
-  color: #e0f2fe;
+  background: var(--accent-soft);
+  color: #fffaf0;
 }
 
 .password-form {
@@ -136,24 +138,24 @@ p {
 .password-row input {
   flex: 1;
   min-width: 210px;
-  background: #0b1220;
+  background: #fffcf5;
   color: var(--text);
-  border: 1px solid #334155;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.6rem;
 }
 
 .password-row button {
-  border: 1px solid #334155;
+  border: 1px solid #111111;
   border-radius: 8px;
-  background: #1f2937;
-  color: var(--text);
+  background: #111111;
+  color: #fffaf0;
   padding: 0.6rem 0.9rem;
   cursor: pointer;
 }
 
 .password-row button:hover {
-  border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .feedback {
