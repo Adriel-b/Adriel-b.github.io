@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Your Name</h1>
+      <nav class="tabs" aria-label="Main sections">
+        <button class="tab-button active" data-target="landing">Landing</button>
+        <button class="tab-button" data-target="portfolio">Portfolio</button>
+        <button class="tab-button" data-target="blank">Blank</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="landing" class="tab-panel active" aria-live="polite">
+      <h2>Welcome</h2>
+      <p>
+        This is your landing section. Add your introduction, value proposition,
+        and a call-to-action here.
+      </p>
+      <button class="cta-button">Get in Touch</button>
+    </section>
+
+    <section id="portfolio" class="tab-panel">
+      <h2>Portfolio</h2>
+      <p class="lock-text">This section is password protected.</p>
+
+      <form id="password-form" class="password-form">
+        <label for="password-input">Enter password to view portfolio:</label>
+        <div class="password-row">
+          <input
+            id="password-input"
+            name="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+            required
+          >
+          <button type="submit">Unlock</button>
+        </div>
+        <p id="password-feedback" class="feedback" role="status"></p>
+      </form>
+
+      <div id="portfolio-content" class="portfolio-content hidden">
+        <h3>My Work</h3>
+        <ul>
+          <li>Project One - Add details later.</li>
+          <li>Project Two - Add details later.</li>
+          <li>Project Three - Add details later.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blank" class="tab-panel">
+      <h2>Blank Tab</h2>
+      <p>This section is intentionally blank for now. We can customize it next.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

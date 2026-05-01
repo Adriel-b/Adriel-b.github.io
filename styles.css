@@ -1,0 +1,153 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22d3ee;
+  --accent-dark: #0891b2;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(160deg, #020617 0%, #111827 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #1f2937;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  border: 1px solid #334155;
+  background: transparent;
+  color: var(--text);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  border-color: var(--accent);
+  background: rgba(34, 211, 238, 0.15);
+}
+
+main.container {
+  padding: 2rem 0 3rem;
+}
+
+.tab-panel {
+  display: none;
+  border: 1px solid #1f2937;
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+p {
+  color: var(--muted);
+}
+
+.cta-button {
+  margin-top: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #082f49;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: var(--accent-dark);
+  color: #e0f2fe;
+}
+
+.password-form {
+  margin-top: 1rem;
+}
+
+.password-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.password-row input {
+  flex: 1;
+  min-width: 210px;
+  background: #0b1220;
+  color: var(--text);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.password-row button {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #1f2937;
+  color: var(--text);
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+.password-row button:hover {
+  border-color: var(--accent);
+}
+
+.feedback {
+  min-height: 1.2rem;
+  color: var(--danger);
+  margin: 0.5rem 0 0;
+}
+
+.portfolio-content {
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
